@@ -1,11 +1,27 @@
 
 $(document).ready(function() {
 
+  let currentSection = $("#body").attr("data-section");
 
-  Initializing(function() {
-    $("#menus").removeClass("hidden");});
 
- });
+  switch(currentSection){
+
+    case("main"):
+      Initializing(function() {
+        window.setTimeout(function(){$("#menus").removeClass("hidden");}, 16000);
+
+      });
+    break;
+    case("comms-relay"):
+      Message1(function() {
+        window.setTimeout(function(){$("#menus").removeClass("hidden");}, 16000);
+
+      });
+    break;
+  }
+
+
+});
 
 function Initializing(_callback){
 
@@ -29,7 +45,7 @@ function Initializing(_callback){
 
 
 
-function Message1(){
+function Message1(_callback){
   _$("body", 100, 800)
   .type("--Begin Transmission").wait(1000).speed(25).lineBreak()
   .type("Incoming message").wait(1000).speed(25).lineBreak()
@@ -56,5 +72,6 @@ function Message1(){
   .type("--End Transmission").wait(1000).speed(100)
 
   ;
+  _callback();
 
 }

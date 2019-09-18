@@ -9,3 +9,18 @@ body{
   color: black;
   border-color: #47980D;
 }
+
+.footer{
+  position: absolute;
+  bottom: 2vw;
+  left: 49%;
+}
+
+#menus{
+  top: 50%;
+}
+
+
+.main-computer-screen{
+  border-right: 1px solid grey;
+}
